@@ -18,13 +18,15 @@ Thumbs.db
 .vscode/
 
 # Rebound runtime data & deps (never commit — lives in ~/.rebound, but guard here too)
+# NOTE: anchor to repo root so these don't match tracked files like commands/profile.md
 .rebound/
 pylibs/
-profile.json
-profile.md
+/profile.json
+/profile.md
 
 # Personal tracker data must never be committed. Only the DUMMY sample is tracked.
-tracker.json
+# Anchored/scoped so the tracked dummy sample and any docs are unaffected.
+/tracker.json
 dashboard/public/data/tracker.json
 dashboard/public/data/*.local.json
 
