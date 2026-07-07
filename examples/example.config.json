@@ -1,0 +1,56 @@
+{
+  "out": "REPLACE_WITH_OUTPUT_PATH.docx",
+  "name": "JANE DOE",
+  "title": "Senior Software Engineer  |  Backend & Distributed Systems  ·  Cloud  ·  Applied AI",
+  "contact": "+1 (555) 555-5555  |  jane@example.com  |  linkedin.com/in/janedoe  |  Austin, TX",
+  "accent": "1F3A5F",
+  "summary": "Senior Software Engineer with 7+ years building **scalable backend and distributed systems**. Deep in Java, Go, and Python across cloud-native platforms (Kubernetes, CI/CD, observability), with a track record of shipping reliable services at scale. A *proven fast learner* who re-tools with each move on strong object-oriented and systems fundamentals.",
+  "sections": [
+    {
+      "heading": "Work Experience",
+      "type": "experience",
+      "roles": [
+        {
+          "title": "Senior Software Engineer  —  Acme Corp",
+          "meta": "Austin, TX  |  2022 – Present",
+          "bullets": [
+            "**Led design and delivery of a data platform** ingesting ~1 TB/day, cutting incident detection time by 40%.",
+            "**Architected a self-healing service orchestrator** sustaining 99.9% availability with zero-downtime upgrades.",
+            "Mentored 8+ engineers and drove code-review and reliability standards across the team."
+          ]
+        },
+        {
+          "title": "Software Engineer  —  Beta Inc",
+          "meta": "Remote  |  2018 – 2022",
+          "bullets": [
+            "Built and scaled REST APIs and a React front end for millions of users.",
+            "Migrated legacy services to containers and CI/CD, improving release reliability."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Technical Skills",
+      "type": "skills",
+      "skills": [
+        {"label": "Languages", "items": "Java, Go, Python, JavaScript, SQL"},
+        {"label": "Cloud & DevOps", "items": "AWS, Kubernetes, Docker, CI/CD, OpenTelemetry"},
+        {"label": "Data", "items": "PostgreSQL, Redis, Kafka (working knowledge)"}
+      ]
+    },
+    {
+      "heading": "Education",
+      "type": "roles_only",
+      "roles": [
+        {"title": "B.S. Computer Science  —  State University", "meta": "GPA 3.9/4.0  |  2018"}
+      ]
+    },
+    {
+      "heading": "Certifications & Achievements",
+      "type": "bullets",
+      "bullets": [
+        "**AWS Certified** Solutions Architect  ·  **Certified Kubernetes Application Developer (CKAD)**"
+      ]
+    }
+  ]
+}

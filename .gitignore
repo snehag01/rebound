@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Rebound runtime data & deps (never commit — lives in ~/.rebound, but guard here too)
+.rebound/
+pylibs/
+profile.json
+profile.md
+
+# Generated résumé output (the tool writes these into user folders, keep them out of the repo)
+*.pdf
+*.docx
+*_resumes/
+*_smoke.*
+
+# Keep bundled examples (configs are JSON, not ignored)
+!examples/**

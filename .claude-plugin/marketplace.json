@@ -1,0 +1,17 @@
+{
+  "name": "rebound",
+  "owner": {
+    "name": "Sneha Gullapalli"
+  },
+  "metadata": {
+    "description": "Rebound — your comeback, engineered. A career-comeback companion for Claude Code.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "rebound",
+      "source": "./",
+      "description": "Honesty-first resume tailoring to any JD (Word + PDF), a private profile with your real situation (visa/timeline), and a roadmap toward role-matching and job-search moral support."
+    }
+  ]
+}

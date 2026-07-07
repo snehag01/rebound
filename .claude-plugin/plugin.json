@@ -1,0 +1,24 @@
+{
+  "name": "rebound",
+  "version": "0.1.0",
+  "description": "Your comeback, engineered. Honesty-first resume tailoring for any job description — clean, ATS-safe Word + PDF output — plus a private profile that remembers who you are and your real situation (work authorization, timeline). Built to grow into role-matching and job-search support. Knocked down. Not out.",
+  "author": {
+    "name": "Sneha Gullapalli"
+  },
+  "homepage": "https://github.com/snehag/rebound",
+  "repository": "https://github.com/snehag/rebound",
+  "license": "MIT",
+  "keywords": [
+    "resume",
+    "cv",
+    "job-search",
+    "career",
+    "ats",
+    "resume-tailoring",
+    "layoff",
+    "job-matching",
+    "visa",
+    "opt",
+    "h1b"
+  ]
+}
