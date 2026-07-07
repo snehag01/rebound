@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Roadmap
+    url: https://github.com/snehag01/rebound/tree/main/roadmap
+    about: See what's planned before filing a feature request.
+  - name: Question / discussion
+    url: https://github.com/snehag01/rebound/discussions
+    about: Ask a question or share how you're using Rebound.
