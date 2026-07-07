@@ -7,7 +7,7 @@ assignees: ''
 ---
 
 **The problem / job-seeker pain**
-What are you trying to do? Who does it help (e.g., laid-off engineers, visa-constrained seekers)?
+What are you trying to do? Who does it help (e.g., laid-off engineers, sponsorship-dependent seekers)?
 
 **Proposed solution**
 What you'd like Rebound to do. If it maps to a roadmap item, link it (`roadmap/`).

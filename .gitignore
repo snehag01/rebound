@@ -1,3 +1,9 @@
+# Node / dashboard build
+node_modules/
+dashboard/node_modules/
+dashboard/dist/
+dist/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -16,6 +22,11 @@ Thumbs.db
 pylibs/
 profile.json
 profile.md
+
+# Personal tracker data must never be committed. Only the DUMMY sample is tracked.
+tracker.json
+dashboard/public/data/tracker.json
+dashboard/public/data/*.local.json
 
 # Generated résumé output (the tool writes these into user folders, keep them out of the repo)
 *.pdf

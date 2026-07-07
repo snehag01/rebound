@@ -5,7 +5,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- _Nothing yet._
+### Added
+- **Local dashboard** (`dashboard/`, React + Vite) — visualizes the job search from `~/.rebound/data/tracker.json`: stat cards, pipeline funnel, applications-over-time, fit-score distribution, and a per-company table with the résumé curated for each role. Rich CSS, pure CSS/SVG charts, live datastore via a Vite `/api/tracker` middleware (sample-data fallback). All analytics local.
+- `/rebound:track` — record/update applications in the local datastore.
+- `/rebound:dashboard` — launch the dashboard.
+- Roadmap `07072026` updated with the **v0.2.0 Local Application Dashboard** milestone.
 
 ## [0.1.0] — 2026-07-07
 Foundation release: the honesty-first résumé engine and private profile.

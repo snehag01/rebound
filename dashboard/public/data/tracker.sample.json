@@ -1,0 +1,25 @@
+{
+  "_comment": "DUMMY demo data — fictional people and companies. Real data lives locally in ~/.rebound/data/tracker.json and is never committed.",
+  "client": {
+    "name": "Alex Rivera",
+    "title": "Software Engineer — Demo Profile",
+    "updated": "2026-01-15"
+  },
+  "goals": { "weekly_target": 8 },
+  "applications": [
+    { "id": "JOB-2054", "company": "Stark Industries", "role": "Distributed Systems Engineer", "location": "Remote", "status": "onsite", "fit": 95, "sponsor": true, "resume_file": "JOB2054_AlexR.pdf", "applied_date": "2025-12-20", "updated_date": "2026-01-12", "source": "referral", "notes": "demo" },
+    { "id": "JOB-2048", "company": "Northwind Traders", "role": "Senior Software Engineer", "location": "Austin, TX", "status": "rejected", "fit": 70, "sponsor": true, "resume_file": "JOB2048_AlexR.pdf", "applied_date": "2025-12-22", "updated_date": "2026-01-04", "source": "board", "notes": "demo" },
+    { "id": "JOB-2045", "company": "Stark Industries", "role": "AI Engineer", "location": "Remote", "status": "offer", "fit": 92, "sponsor": true, "resume_file": "JOB2045_AlexR.pdf", "applied_date": "2025-12-29", "updated_date": "2026-01-14", "source": "referral", "notes": "demo" },
+    { "id": "JOB-2044", "company": "Umbrella Corp", "role": "Site Reliability Engineer", "location": "Hybrid", "status": "onsite", "fit": 88, "sponsor": true, "resume_file": "JOB2044_AlexR.pdf", "applied_date": "2025-12-30", "updated_date": "2026-01-10", "source": "referral", "notes": "demo" },
+    { "id": "JOB-2052", "company": "Initech", "role": "Software Engineer II", "location": "Austin, TX", "status": "applied", "fit": 76, "sponsor": true, "resume_file": "JOB2052_AlexR.pdf", "applied_date": "2026-01-02", "updated_date": "2026-01-02", "source": "board", "notes": "demo" },
+    { "id": "JOB-2050", "company": "Vandelay Industries", "role": "DevOps Lead", "location": "Remote", "status": "screen", "fit": 86, "sponsor": false, "resume_file": "JOB2050_AlexR.pdf", "applied_date": "2026-01-05", "updated_date": "2026-01-11", "source": "referral", "notes": "demo" },
+    { "id": "JOB-2041", "company": "Globex", "role": "Staff Software Engineer", "location": "Austin, TX", "status": "screen", "fit": 90, "sponsor": true, "resume_file": "JOB2041_AlexR.pdf", "applied_date": "2026-01-06", "updated_date": "2026-01-13", "source": "referral", "notes": "demo" },
+    { "id": "JOB-2043", "company": "Hooli", "role": "Full Stack Engineer", "location": "Hybrid", "status": "applied", "fit": 82, "sponsor": false, "resume_file": "JOB2043_AlexR.pdf", "applied_date": "2026-01-06", "updated_date": "2026-01-06", "source": "board", "notes": "demo" },
+    { "id": "JOB-2042", "company": "Initech", "role": "Senior Backend Engineer", "location": "Austin, TX", "status": "applied", "fit": 84, "sponsor": true, "resume_file": "JOB2042_AlexR.pdf", "applied_date": "2026-01-07", "updated_date": "2026-01-07", "source": "referral", "notes": "demo" },
+    { "id": "JOB-2046", "company": "Wayne Enterprises", "role": "Data Engineer", "location": "Remote", "status": "applied", "fit": 78, "sponsor": true, "resume_file": "JOB2046_AlexR.pdf", "applied_date": "2026-01-08", "updated_date": "2026-01-08", "source": "board", "notes": "demo" },
+    { "id": "JOB-2049", "company": "Soylent", "role": "Cloud Engineer", "location": "Hybrid", "status": "applied", "fit": 85, "sponsor": true, "resume_file": "JOB2049_AlexR.pdf", "applied_date": "2026-01-09", "updated_date": "2026-01-09", "source": "referral", "notes": "demo" },
+    { "id": "JOB-2047", "company": "Acme", "role": "Platform Engineer", "location": "Austin, TX", "status": "curated", "fit": 80, "sponsor": false, "resume_file": "JOB2047_AlexR.pdf", "applied_date": null, "updated_date": "2026-01-14", "source": "board", "notes": "demo" },
+    { "id": "JOB-2051", "company": "Globex", "role": "Machine Learning Engineer", "location": "Remote", "status": "curated", "fit": 83, "sponsor": true, "resume_file": "JOB2051_AlexR.pdf", "applied_date": null, "updated_date": "2026-01-14", "source": "referral", "notes": "demo" },
+    { "id": "JOB-2053", "company": "Hooli", "role": "Frontend Engineer", "location": "Hybrid", "status": "curated", "fit": 68, "sponsor": false, "resume_file": "JOB2053_AlexR.pdf", "applied_date": null, "updated_date": "2026-01-15", "source": "board", "notes": "demo" }
+  ]
+}

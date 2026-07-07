@@ -23,8 +23,8 @@ Create `~/.rebound/` if missing. On updates, rewrite both files and confirm.
   "roles": [{"title": "", "org": "", "location": "", "dates": "", "bullets": []}],
   "education": [], "certifications": [],
   "situation": {
-    "work_authorization": null,      // Citizen | GC | H-1B | F-1 OPT | STEM-OPT | O-1 | TN | needs-sponsorship | null
-    "timeline": null,                // absolute dates + runway, e.g. "OPT EAD until 2026-08-15; ~60 days"
+    "work_authorization": null,      // high-level only: "no sponsorship needed" | "will need sponsorship" | null
+    "timeline": null,                // absolute dates + runway, e.g. "authorization/sponsorship deadline ~2026-08-15; ~60 days"
     "target_roles": [], "locations": [], "work_mode": null, "notes": null
   },
   "preferences": {

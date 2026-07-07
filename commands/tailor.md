@@ -34,7 +34,7 @@ Assemble a JSON config for the generator (schema in the **resume-export** skill)
 
 ## 5. Decide the output folder & filenames
 - Folder: use `--out <folder>` if given; otherwise `<FirstName>_resumes` in the current directory (create it if missing).
-- Filenames: `<JobId>_<LastNameInitial>` (e.g., `REF12345_SnehaG`). If no JobId, use a short role/company slug and tell the user to rename once they have the ID.
+- Filenames: `<JobId>_<LastNameInitial>` (e.g., `REF12345_JDoe`). If no JobId, use a short role/company slug and tell the user to rename once they have the ID.
 
 ## 6. Export Word + PDF (ATS-safe)
 - Write the config JSON to a temp file, then run the generator and converter from the **resume-export** skill:

@@ -26,4 +26,4 @@ What you expected, and what happened instead.
 - Claude Code version:
 
 **Privacy note**
-⚠️ Please **do not** paste your résumé, personal contact info, or any work-authorization / visa details in this public issue. Redact or describe generically.
+⚠️ Please **do not** paste your résumé, personal contact info, or any work-authorization / sponsorship details in this public issue. Redact or describe generically.

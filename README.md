@@ -15,15 +15,24 @@ Rebound is **honesty-first**: it makes you look as strong as you *truthfully* ar
 | `/rebound:start` | Onboards you: reads your **base résumé**, builds a **private profile** (skills, differentiators, and — optionally — your **work authorization & timeline**). |
 | `/rebound:tailor <JD or URL>` | Curates a résumé for one role → **`.docx` + text-based `.pdf`** in a folder you choose (or `<Name>_resumes`). Handles Workday/board JSON, flags gaps, keeps it truthful. |
 | `/rebound:profile` | View / update your profile, including the private situation. |
+| `/rebound:track add\|update ...` | Records an application in your local datastore (`~/.rebound/data/tracker.json`). |
+| `/rebound:dashboard` | Launches the **local React dashboard** to visualize progress. |
 | `/rebound:match <URLs>` | Scores role fit (50–90%+) and ranks where to spend effort. *(crawling discovery on the roadmap)* |
 | `/rebound:rise` | A supportive, practical check-in that respects your runway. *(momentum tracking on the roadmap)* |
+
+### 📊 Local dashboard
+A React dashboard (in [`dashboard/`](./dashboard/)) visualizes your search — stat cards, a pipeline funnel, momentum-over-time bars, fit-score distribution, and a per-company table showing the exact résumé curated for each role. Claude Code writes `~/.rebound/data/tracker.json`; the dashboard reads it live on `localhost`. All analytics stay on your machine.
+
+```bash
+cd dashboard && npm install && npm run dev     # → http://localhost:5273
+```
 
 ### Principles baked in
 - **Base résumé is the source of truth** — re-word and re-order, never fabricate.
 - **Primary over secondary** — relevant secondary skills support, they don't headline over your real strengths.
 - **Fast-learner framing** — a required-but-unused stack is neutralized by genuine adaptability, never a false claim.
 - **ATS-safe output** — single column, real text, verified text-layer PDF.
-- **Your situation is private** — visa/timeline data is stored **locally only** and never leaves your machine or enters a résumé.
+- **Your situation is private** — sponsorship/timeline data is stored **locally only** and never leaves your machine or enters a résumé.
 
 ---
 
@@ -73,7 +82,7 @@ Versioned snapshots live in [`roadmap/`](./roadmap/) (dated `mmddyyyy`; latest =
 - **Role discovery** — crawl career sites/boards for fresh roles, pre-scored by fit % (≥50/60/70/80/90), sponsorship-aware.
 - **Application tracking** — statuses, follow-ups, per-role résumé versions.
 - **Interview prep & momentum** — reps, streaks, gentle check-ins tied to your timeline.
-- **Situation-aware strategy** — sponsorship filters and urgency triage for OPT/H-1B/O-1 and thin-runway searches.
+- **Situation-aware strategy** — sponsorship filters and urgency triage for sponsorship-dependent and thin-runway searches.
 
 ---
 
