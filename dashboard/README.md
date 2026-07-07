@@ -2,6 +2,10 @@
 
 A **local** React dashboard that visualizes your job search — applications, résumés curated per company, pipeline funnel, momentum over time, and fit-score distribution. Everything is computed **on your machine**; nothing leaves it.
 
+![Rebound dashboard — showing demo data](../docs/dashboard.png)
+
+> _Demo data shown (fictional). Your real data lives in `~/.rebound/data/tracker.json` and never leaves your machine._
+
 ## Run it
 ```bash
 cd dashboard

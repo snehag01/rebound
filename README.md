@@ -23,6 +23,10 @@ Rebound is **honesty-first**: it makes you look as strong as you *truthfully* ar
 ### 📊 Local dashboard
 A React dashboard (in [`dashboard/`](./dashboard/)) visualizes your search — stat cards, a pipeline funnel, momentum-over-time bars, fit-score distribution, and a per-company table showing the exact résumé curated for each role. Claude Code writes `~/.rebound/data/tracker.json`; the dashboard reads it live on `localhost`. All analytics stay on your machine.
 
+![Rebound dashboard — showing demo data](./docs/dashboard.png)
+
+> _Screenshot shows bundled demo data. Your real numbers stay local in `~/.rebound/`._
+
 ```bash
 cd dashboard && npm install && npm run dev     # → http://localhost:5273
 ```
