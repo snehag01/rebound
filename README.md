@@ -2,9 +2,16 @@
 
 > **Knocked down. Not out.**
 
+[![Stars](https://img.shields.io/github/stars/snehag01/rebound?style=social)](https://github.com/snehag01/rebound/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+[![Good first issues](https://img.shields.io/github/issues/snehag01/rebound/good%20first%20issue?label=good%20first%20issues&color=7057ff)](https://github.com/snehag01/rebound/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
 A Claude Code plugin that turns a job description into a **tailored, honest, ATS-safe résumé** (Word **+** PDF) in one command — then remembers who you are so the next one takes seconds. Built for job seekers, and especially for anyone rebounding after a layoff.
 
 Rebound is **honesty-first**: it makes you look as strong as you *truthfully* are, so the resume that gets you the interview is the same one you can defend in it.
+
+> ⭐ **If Rebound helps you — or you believe laid-off engineers deserve better tools — please [star the repo](https://github.com/snehag01/rebound). Every star helps another job-seeker find it, and brings in contributors who make it better.**
 
 ---
 
@@ -87,6 +94,21 @@ Versioned snapshots live in [`roadmap/`](./roadmap/) (dated `mmddyyyy`; latest =
 - **Application tracking** — statuses, follow-ups, per-role résumé versions.
 - **Interview prep & momentum** — reps, streaks, gentle check-ins tied to your timeline.
 - **Situation-aware strategy** — sponsorship filters and urgency triage for sponsorship-dependent and thin-runway searches.
+
+---
+
+## 🤝 Contributing — we'd love your help
+
+Rebound is early and **open to contributors of all levels**. Whether you write code, docs, or just have ideas from your own job search, there's a place for you.
+
+- 🌱 **New here?** Start with a [**good first issue**](https://github.com/snehag01/rebound/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) — each one is self-contained with context and pointers.
+- 🙌 **Want something meatier?** See [**help wanted**](https://github.com/snehag01/rebound/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) (dashboard analytics, cross-platform PDF export, the `/rebound:match` engine).
+- 💡 **Have an idea or hit a bug?** [Open an issue](https://github.com/snehag01/rebound/issues/new/choose) — lived experience of the job hunt is exactly the perspective this project needs.
+- 📖 Read [`CONTRIBUTING.md`](./CONTRIBUTING.md) for setup and the guiding principles (honesty-first, privacy-first).
+
+Comment on an issue to claim it — no PR is too small, and first-time contributors are genuinely welcome. 🥊
+
+If you can't contribute code, the single most helpful thing is to **[⭐ star the repo](https://github.com/snehag01/rebound)** so more job-seekers (and contributors) discover it.
 
 ---
 
