@@ -51,7 +51,7 @@ cd dashboard && npm install && npm run dev     # → http://localhost:5273
 
 ```bash
 # In Claude Code:
-/plugin marketplace add /Users/snehagullapalli/rebound     # or your GitHub repo
+/plugin marketplace add https://github.com/snehag01/rebound     # GitHub repo (or a local path to your clone)
 /plugin install rebound
 
 # First run:
