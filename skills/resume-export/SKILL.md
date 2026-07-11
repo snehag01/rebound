@@ -7,6 +7,8 @@ description: Render a resume config to a clean, ATS-safe Word (.docx) and a text
 
 Turn a tailored resume config into files. Layout is intentionally **ATS-safe**: single column, real text (no tables, text boxes, columns, or images-of-text), standard fonts, navy section rules.
 
+**Which file to hand the user (default):** upload the **`.docx` to online applications / ATS portals** — it parses most reliably across the widest range of ATS (structured XML fields; safest in legacy systems like Taleo). Send the **verified-text `.pdf` when emailing a human** or a referrer (it locks formatting). Both are single-column and ATS-safe — the choice is about the upload target, not quality. (A clean text-layer PDF also parses fine in modern ATS; `.docx` is simply the more conservative default.)
+
 ## Scripts (in this skill's `scripts/`)
 - `build_resume.py <config.json>` → writes the `.docx`.
 - `to_pdf.py <in.docx> [out.pdf]` → converts and **verifies a real text layer** (ATS-readable), trying LibreOffice → macOS Word → docx2pdf.
