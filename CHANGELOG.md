@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- **Reading-order PDF verification** — `to_pdf.py` can now verify a PDF's text extracts *in the right order* (name → sections), not just that a text layer exists. A multi-column layout has a text layer but extracts scrambled — the real ATS-parsing failure — and this catches it. Opt-in via `--anchors "Name,Summary,Experience,Skills"`; uses poppler `pdftotext` → pdfminer → a stdlib fallback. Serves as a guarantee/regression check on Rebound's own single-column output (esp. LibreOffice vs Word divergence).
 - **Local dashboard** (`dashboard/`, React + Vite) — visualizes the job search from `~/.rebound/data/tracker.json`: stat cards, pipeline funnel, applications-over-time, fit-score distribution, and a per-company table with the résumé curated for each role. Rich CSS, pure CSS/SVG charts, live datastore via a Vite `/api/tracker` middleware (sample-data fallback). All analytics local.
 - `/rebound:track` — record/update applications in the local datastore.
 - `/rebound:dashboard` — launch the dashboard.

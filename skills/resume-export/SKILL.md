@@ -63,3 +63,9 @@ osascript -e 'tell application "Microsoft Word" to open (POSIX file "/abs/in.doc
 
 ## Always verify
 A resume PDF must be **text-based**, never a scanned image — `to_pdf.py` confirms this by finding `BT`/`Tj` operators in the (decompressed) content streams. If verification fails, re-convert with a different engine before delivering.
+
+**Reading order, not just presence.** A multi-column PDF *has* a text layer but extracts **scrambled** — which is what actually breaks ATS parsing. Pass the name + section headings as anchors and `to_pdf.py` verifies they extract *in that order* (via poppler `pdftotext` → pdfminer → a stdlib fallback):
+```bash
+python3 .../to_pdf.py out.docx out.pdf --anchors "Jane Doe,Summary,Work Experience,Skills,Education"
+```
+Rebound already generates single-column, so this is a **guarantee/regression check** on its own output — especially valuable because LibreOffice vs Word embed text streams differently. If the reading-order check warns, re-convert with a different engine before delivering.
