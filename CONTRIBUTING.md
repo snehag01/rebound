@@ -7,7 +7,7 @@ Rebound is **honesty-first**. Any change must keep these intact:
 1. **The base résumé is the source of truth** — the tool re-words and re-orders, it never fabricates.
 2. **No claimed expertise in unused tech** — label unproven tools "working knowledge" / "familiar".
 3. **Primary over secondary** — relevant secondary skills support; they never headline over real strengths.
-4. **The user's situation is private** — work-authorization / timeline data stays local (`~/.rebound/`), never enters a résumé, never leaves the machine.
+4. **The user's situation is private** — work-authorization / timeline data stays in local files (`~/.rebound/`), is never written into a résumé, and is never sent to any job board, recruiter, or third-party service. (It runs through the user's own AI assistant to help them, like anything in Claude Code — never to an external career service.)
 
 ## Project layout
 ```
