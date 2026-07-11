@@ -12,6 +12,10 @@ Conversion strategy (first that works wins):
 
 Then verifies the PDF actually carries an extractable text layer (BT/Tj operators
 inside decompressed content streams) so it passes ATS parsers — never a scanned image.
+
+With `--anchors "Name,Experience,Skills"` it also verifies **reading order**: that
+those strings extract in that order. A multi-column layout *has* a text layer but
+extracts scrambled, which plain text-layer detection cannot catch; this can.
 Exit code 0 on success, non-zero otherwise.
 """
 import sys, os, re, zlib, subprocess, shutil
@@ -68,7 +72,95 @@ def verify_text_layer(pdf):
     return bt > 0 and tj > 0, bt, tj
 
 
-def to_pdf(inp, outp=None):
+def _strings_from_stream(stream):
+    """Pull ( ... ) text literals from a content stream, in operator (reading) order."""
+    out = []
+    i, n = 0, len(stream)
+    while i < n:
+        if stream[i:i + 1] == b"(":
+            j, depth, buf = i + 1, 1, bytearray()
+            while j < n and depth > 0:
+                ch = stream[j:j + 1]
+                if ch == b"\\":
+                    nxt = stream[j + 1:j + 2]
+                    buf += {b"n": b"\n", b"t": b"\t", b"r": b"\r"}.get(nxt, nxt)
+                    j += 2
+                    continue
+                if ch == b"(":
+                    depth += 1
+                    buf += ch
+                elif ch == b")":
+                    depth -= 1
+                    if depth == 0:
+                        j += 1
+                        break
+                    buf += ch
+                else:
+                    buf += ch
+                j += 1
+            out.append(buf.decode("latin-1", "ignore"))
+            i = j
+        else:
+            i += 1
+    return " ".join(out)
+
+
+def _extract_stdlib(pdf):
+    """Dependency-free text extraction in content-stream order — good enough for a
+    single-column reading-order check (pdftotext / pdfminer are preferred when present)."""
+    data = open(pdf, "rb").read()
+    parts = []
+    for s in re.findall(rb"stream\r?\n(.*?)\r?\nendstream", data, re.DOTALL):
+        try:
+            x = zlib.decompress(s)
+        except Exception:
+            x = s
+        parts.append(_strings_from_stream(x))
+    return " ".join(parts)
+
+
+def extract_text_ordered(pdf):
+    """Extract text in reading order — poppler `pdftotext`, then pdfminer, then stdlib."""
+    try:
+        r = subprocess.run(["pdftotext", "-q", pdf, "-"], capture_output=True, timeout=30)
+        if r.returncode == 0 and r.stdout.strip():
+            return r.stdout.decode("utf-8", "ignore")
+    except Exception:
+        pass
+    try:
+        from pdfminer.high_level import extract_text
+        t = extract_text(pdf)
+        if t and t.strip():
+            return t
+    except Exception:
+        pass
+    return _extract_stdlib(pdf)
+
+
+def _in_order(text, anchors):
+    """True iff each anchor appears at/after the previous one (case-insensitive)."""
+    hay = (text or "").lower()
+    pos = 0
+    for a in anchors:
+        a = (a or "").strip().lower()
+        if not a:
+            continue
+        idx = hay.find(a, pos)
+        if idx < 0:
+            return False, a
+        pos = idx + len(a)
+    return True, None
+
+
+def verify_reading_order(pdf, anchors, extractor=None):
+    """Check that `anchors` (e.g. the name, then each section heading, in order)
+    extract in that order. A multi-column PDF *has* a text layer but extracts
+    scrambled — this catches that, which plain text-layer detection cannot."""
+    text = (extractor or extract_text_ordered)(pdf)
+    return _in_order(text, anchors)
+
+
+def to_pdf(inp, outp=None, anchors=None):
     inp = os.path.abspath(inp)
     if not outp:
         outp = os.path.splitext(inp)[0] + ".pdf"
@@ -108,13 +200,25 @@ def to_pdf(inp, outp=None):
 
     good, bt, tj = verify_text_layer(outp)
     status = "TEXT-BASED (ATS-readable)" if good else "WARNING: no text layer detected"
+    order_ok, bad = (True, None)
+    if anchors:
+        order_ok, bad = verify_reading_order(outp, anchors)
+        status += "; reading-order OK" if order_ok else \
+            f"; WARNING: reading order — '{bad}' not found in expected position"
     print(f"Saved: {outp}  [{status}; BT={bt}, Tj/TJ={tj}]")
-    return outp if good else None
+    return outp if (good and order_ok) else None
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("usage: python3 to_pdf.py <input.docx> [output.pdf]", file=sys.stderr)
+    args = list(sys.argv[1:])
+    anchors = None
+    if "--anchors" in args:
+        i = args.index("--anchors")
+        anchors = args[i + 1].split(",") if i + 1 < len(args) else None
+        del args[i:i + 2]
+    if not args:
+        print('usage: python3 to_pdf.py <input.docx> [output.pdf] [--anchors "Name,Experience,Skills"]',
+              file=sys.stderr)
         sys.exit(2)
-    res = to_pdf(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else None)
+    res = to_pdf(args[0], args[1] if len(args) > 1 else None, anchors=anchors)
     sys.exit(0 if res else 1)
