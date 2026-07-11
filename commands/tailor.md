@@ -41,6 +41,7 @@ Assemble a JSON config for the generator (schema in the **resume-export** skill)
   - `python3 "${CLAUDE_PLUGIN_ROOT}/skills/resume-export/scripts/build_resume.py" <config.json>`
   - `python3 "${CLAUDE_PLUGIN_ROOT}/skills/resume-export/scripts/to_pdf.py" <out.docx> <out.pdf>`
 - The converter verifies the PDF carries a real text layer (ATS-readable). If it can't convert, follow the skill's fallbacks.
+- **Which file to use:** the **`.docx` is the default for online applications / ATS portals** — it parses most reliably across the widest range of ATS (structured XML fields; safest in legacy systems like Taleo). Use the **verified-text `.pdf` when emailing a human or a referrer** (locks formatting). Both are single-column and ATS-safe; the difference is upload target, not quality. Tell the user this so they upload the right one.
 
 ## 7. Offer the extras (don't force them)
 - A **4–5 line role-fit note** a referrer can hand a hiring manager (honest; leads with genuine differentiators; names any gap as fast-ramp). Save as `<JobId>_<LastNameInitial>.txt` only if the user wants it.
@@ -49,3 +50,4 @@ Assemble a JSON config for the generator (schema in the **resume-export** skill)
 ## Rules
 - Truthful to the base; strong on relevance; ATS-safe (single column, no tables/text-boxes/images-of-text).
 - Report gaps plainly to the user even while positioning them well on the page.
+- Default the user to the **`.docx` for portal uploads**, the verified-text **`.pdf` for emailing a human**.
