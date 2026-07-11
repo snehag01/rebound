@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- **Job discovery** (`/rebound:discover` + `job-discovery` skill) — finds fresh, real roles via the **public official ATS APIs** (Greenhouse, Lever, Ashby, SmartRecruiters), fit-scores them against the private profile, respects the sponsorship situation, and hands off to `/rebound:tailor` and `/rebound:track`. Stdlib-only fetcher (`fetch_jobs.py`, no new deps) with a documented legal risk model (official/public sources only — never login-scraping, never LinkedIn/Indeed). Offline-tested normalizers for each ATS.
 - **Local dashboard** (`dashboard/`, React + Vite) — visualizes the job search from `~/.rebound/data/tracker.json`: stat cards, pipeline funnel, applications-over-time, fit-score distribution, and a per-company table with the résumé curated for each role. Rich CSS, pure CSS/SVG charts, live datastore via a Vite `/api/tracker` middleware (sample-data fallback). All analytics local.
 - `/rebound:track` — record/update applications in the local datastore.
 - `/rebound:dashboard` — launch the dashboard.
