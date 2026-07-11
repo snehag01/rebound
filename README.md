@@ -43,7 +43,19 @@ cd dashboard && npm install && npm run dev     # → http://localhost:5273
 - **Primary over secondary** — relevant secondary skills support, they don't headline over your real strengths.
 - **Fast-learner framing** — a required-but-unused stack is neutralized by genuine adaptability, never a false claim.
 - **ATS-safe output** — single column, real text, verified text-layer PDF.
-- **Your situation is private** — sponsorship/timeline data is stored **locally only** and never leaves your machine or enters a résumé.
+- **Your situation is private** — sponsorship/timeline data is stored in **local files only**, is never written into a résumé, and is never sent to any job board, recruiter, or ATS. Your AI assistant reads it only to help you — see [How your data is handled](#how-your-data-is-handled).
+
+---
+
+## How your data is handled
+
+Rebound is **local-first, and honest about what that means**:
+
+- **Your files stay yours.** Your profile (`~/.rebound/profile.json`), the tracker datastore, and every résumé are written to **local files on your machine**. Rebound has no backend, no account, and no cloud — it never uploads your data to any Rebound server, job board, recruiter, or ATS, and the dashboard's analytics are all computed locally.
+- **Your AI assistant does the reasoning.** Rebound runs *inside Claude Code*, so — exactly like anything else you do in Claude — the text it needs to reason over (your résumé, a job description, and, when you ask for urgency/sponsorship help, your `situation`) is processed by Claude to produce the output. That's the one place your data is handled by a third party, and it's the same trust you already place in your AI assistant.
+- **The `situation` gets extra care.** It is stored locally, **never written into a résumé or PDF**, never shown on the dashboard, and used only to help you (urgency, sponsor-fit).
+
+In short: **no Rebound cloud and no third-party job/recruiter service ever sees your data — only your own machine and your own AI assistant.**
 
 ---
 
