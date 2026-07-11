@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- **Application packet** (`/rebound:apply` + `application-packet` skill) — assembles a ready-to-submit packet so users apply *well* in minutes instead of an hour, without ever fabricating: a **knockout pre-check** (`knockout.py` flags form-level disqualifiers — min-years, onsite-vs-remote, clearance, degree, licenses — as hard/soft *before* the user invests time), a tailored résumé, drafted answers to the form's recurring questions from a private local **answer memory** (`answers.py`, with reuse-by-similarity), and an honest "why this company" note. **Assists, never auto-submits** — the human reviews and clicks submit. Stdlib-only; offline-tested.
 - **Local dashboard** (`dashboard/`, React + Vite) — visualizes the job search from `~/.rebound/data/tracker.json`: stat cards, pipeline funnel, applications-over-time, fit-score distribution, and a per-company table with the résumé curated for each role. Rich CSS, pure CSS/SVG charts, live datastore via a Vite `/api/tracker` middleware (sample-data fallback). All analytics local.
 - `/rebound:track` — record/update applications in the local datastore.
 - `/rebound:dashboard` — launch the dashboard.
