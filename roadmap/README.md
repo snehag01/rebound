@@ -11,4 +11,4 @@ roadmap/roadmap_<mmddyyyy>.md      e.g. roadmap_07072026.md  (July 7, 2026)
 - Older files are preserved as history, so you can see how the plan evolved.
 - Keep the format consistent (status legend + versioned milestones) so snapshots are diffable.
 
-**Latest:** [`roadmap_07072026.md`](./roadmap_07072026.md)
+**Latest:** [`roadmap_07112026.md`](./roadmap_07112026.md)

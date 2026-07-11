@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `/rebound:track` — record/update applications in the local datastore.
 - `/rebound:dashboard` — launch the dashboard.
 - Roadmap `07072026` updated with the **v0.2.0 Local Application Dashboard** milestone.
+- Roadmap snapshot **`07112026`** — re-sequenced after a market/ATS/candidate-lifecycle research pass: role discovery + sponsorship intelligence pulled forward as the flagship, evidence-based interview prep (spaced retrieval + implementation intentions) replacing vanity streaks, and a per-requirement coverage checklist replacing ATS "match scores."
 
 ## [0.1.0] — 2026-07-07
 Foundation release: the honesty-first résumé engine and private profile.
