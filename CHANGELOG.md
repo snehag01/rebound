@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- **Sponsorship signal** (`/rebound:sponsor` + `sponsorship-signal` skill) — for sponsorship-dependent searches, answers "does this company actually sponsor H-1B?" from the **official public USCIS H-1B Employer Data Hub** data. Builds a local index, looks up an employer (fuzzy name match), and annotates `/rebound:discover` roles with a `likelihood` (high/medium/low/none/unknown) + approval counts. Honestly labeled (annual/retrospective data; `unknown` never means "won't sponsor"; not legal advice); never touches the private `situation`. Stdlib-only; offline-tested.
 - **Local dashboard** (`dashboard/`, React + Vite) — visualizes the job search from `~/.rebound/data/tracker.json`: stat cards, pipeline funnel, applications-over-time, fit-score distribution, and a per-company table with the résumé curated for each role. Rich CSS, pure CSS/SVG charts, live datastore via a Vite `/api/tracker` middleware (sample-data fallback). All analytics local.
 - `/rebound:track` — record/update applications in the local datastore.
 - `/rebound:dashboard` — launch the dashboard.
