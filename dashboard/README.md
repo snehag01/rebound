@@ -1,10 +1,10 @@
 # Rebound Dashboard 🥊📊
 
-A **local** React dashboard that visualizes your job search — applications, résumés curated per company, pipeline funnel, momentum over time, and fit-score distribution. Everything is computed **on your machine**; nothing leaves it.
+A **local** React dashboard that visualizes your job search — applications, résumés curated per company, pipeline funnel, momentum over time, and fit-score distribution. Everything is computed **on your machine** and is never uploaded to any server.
 
 ![Rebound dashboard — showing demo data](../docs/dashboard.png)
 
-> _Demo data shown (fictional). Your real data lives in `~/.rebound/data/tracker.json` and never leaves your machine._
+> _Demo data shown (fictional). Your real data lives in `~/.rebound/data/tracker.json` on your machine — the dashboard never uploads it anywhere._
 
 ## Run it
 ```bash
@@ -20,7 +20,7 @@ Claude Code  ──writes──►  ~/.rebound/data/tracker.json  ──served b
 ```
 - The Vite dev server has a small middleware that serves `~/.rebound/data/tracker.json` at `/api/tracker`.
 - If that file doesn't exist yet, it falls back to `public/data/tracker.sample.json` — **fictional dummy data** (Alex Rivera / made-up companies) so you can try the UI immediately. It's labeled **sample data** in the header.
-- **Privacy:** only the dummy sample is committed to the repo. Your real data lives in `~/.rebound/data/tracker.json` and is git-ignored — it never leaves your machine.
+- **Privacy:** only the dummy sample is committed to the repo. Your real data lives in `~/.rebound/data/tracker.json`, is git-ignored, and is never uploaded by the dashboard.
 - Click **↻ Refresh** after logging applications with `/rebound:track`.
 
 ## What you see

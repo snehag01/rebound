@@ -24,7 +24,9 @@ function isoWeekKey(dateStr) {
 export function computeMetrics(tracker) {
   const apps = Array.isArray(tracker?.applications) ? tracker.applications : []
 
-  const resumesCurated = apps.length
+  // Honest count: a résumé is "curated" only when Rebound actually produced one
+  // (a role you tracked but applied to elsewhere, with no resume_file, doesn't count).
+  const resumesCurated = apps.filter((a) => a.resume_file).length
   const applied = apps.filter((a) => APPLIED_SET.has(a.status))
   const screened = apps.filter((a) => SCREENED_SET.has(a.status))
   const onsite = apps.filter((a) => ONSITE_SET.has(a.status))
@@ -36,7 +38,7 @@ export function computeMetrics(tracker) {
 
   // Funnel (cumulative "reached at least this stage")
   const funnel = [
-    { key: 'curated', label: 'Résumés curated', value: resumesCurated },
+    { key: 'curated', label: 'In pipeline', value: resumesCurated || apps.length },
     { key: 'applied', label: 'Applied', value: applied.length },
     { key: 'screen', label: 'Phone screen', value: screened.length },
     { key: 'onsite', label: 'Onsite', value: onsite.length },
