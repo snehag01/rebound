@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `/rebound:dashboard` — launch the dashboard.
 - Roadmap `07072026` updated with the **v0.2.0 Local Application Dashboard** milestone.
 
+### Tests / CI
+- Added a **test suite and GitHub Actions CI**: pytest for the résumé generator (`build_resume.py` — content preserved, ATS-safe single-column, no tables) and the PDF text-layer verifier (`to_pdf.py` — detects real text vs image-only, compressed & uncompressed streams); Vitest for the dashboard metrics (`metrics.js` — honest counting, funnel monotonicity, empty/null input). CI runs both on every push and PR.
+
 ### Fixed
 - Corrected the plugin manifest `homepage`/`repository` URLs (`snehag` → `snehag01`) so they resolve to the real repository.
 - Dashboard **"Résumés curated"** now counts only applications that actually have a curated résumé file, instead of every tracked row.
