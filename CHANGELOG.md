@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `/rebound:track` — record/update applications in the local datastore.
 - `/rebound:dashboard` — launch the dashboard.
 - Roadmap `07072026` updated with the **v0.2.0 Local Application Dashboard** milestone.
+- Dashboard unit tests — Vitest suite for the pure metrics engine (`dashboard/src/metrics.test.js`): stat cards, funnel, weekly `overTime` bucketing, `fitBuckets` boundaries, and empty/malformed-tracker edge cases; `npm test` script and README docs. (#5)
 
 ## [0.1.0] — 2026-07-07
 Foundation release: the honesty-first résumé engine and private profile.

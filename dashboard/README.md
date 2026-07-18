@@ -13,6 +13,14 @@ npm install      # first time only
 npm run dev      # → http://localhost:5273
 ```
 
+## Run the tests
+```bash
+cd dashboard
+npm install      # first time only
+npm test         # Vitest unit suite for the metrics engine
+```
+Covers `computeMetrics()` and `weeklyProgress()` in [`src/metrics.js`](./src/metrics.js) — stat cards, pipeline funnel, weekly bucketing, and fit-score distribution — including empty/malformed-tracker edge cases.
+
 ## How the data flows
 ```
 Claude Code  ──writes──►  ~/.rebound/data/tracker.json  ──served by Vite──►  React dashboard
